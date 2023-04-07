@@ -87,6 +87,9 @@ p, a {
 }
 
 /* header section */
+body{
+    color: rgb(225, 239, 230);
+}
 header {
     width: 100%;
     height: 100vh;
@@ -95,6 +98,32 @@ header {
     background-position: center;
     background-repeat: no-repeat;
 }
+#headericerik{
+    background-color: rgb(0, 4, 17, .8);​​
+}
+#navbar{
+display: flex;
+justify-content: space-evenly;
+margin-bottom: 10px;
+}
+#navbar a{
+    font-size: 30px;
+    color: white;
+}
+#baslik{
+    display: flex;
+    justify-content: center;
+    padding: 15px;
+    color: white;
+}
+#semboller{
+    display: flex;
+    justify-content: center;
+}
+#semboller a{
+    margin: 15px 40px;
+}
+
 
 /* spacer */
 .spacer {
@@ -107,7 +136,6 @@ header {
     height: 10vh;
     background-color: rgb(0, 4, 17);
 }
-
 /* menu */
 
 .menu {
@@ -119,6 +147,51 @@ header {
     background-position: center;
     background-repeat: no-repeat;
 }
+#manuarkaplanrengi{
+    background-color: rgb(0, 4, 17, .8);
+}
+#menuadi{
+    display: flex;
+    justify-content: center;
+    padding: 50px 0px;
+    text-align: center;
+}
+
+.icerikleri p{
+    font-size: 20px;
+}
+#menuler{
+    display: flex;
+    justify-content: center;
+}
+#listelerendis{
+    max-width: 80%;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+.listeler{
+width: 550px;
+margin: 35px 0px;
+}
+.listeler h3{
+    text-align: center;
+    font-weight: bold;
+}
+.urunlararasiaralik{
+    padding: 15px 0px;
+}
+.urunvefiyat{
+    display: flex;
+    justify-content: space-between;
+}
+
+
+
+
+
+
+
 
 /* footer section */
 footer {
@@ -126,11 +199,68 @@ footer {
     height: 15vh;
     padding-top: 2.5vh;
     font-size: 3rem;
+    background-color: rgb(0, 4, 17);
 }
+footer div{
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    padding: 0px 10px;
+}
+#footermail {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+    width: 600px;
+  }
+  #footermail div{
+    justify-content: center;
+  }
+  #footernav div a{
+    color: rgb(225, 239, 230);
+  }
+  
+  .mailbar{
+    font-size: 24px;
+  }
+  #footernav{
+    margin: 0px 50px;
+  }
+#haklari div{
+    display: flex;
+    justify-content: flex-end;
+}
+#haklari div p{
+    font-size: 25px;
+    color: rgba(255, 255, 255, 0.452);
+}
+
 
 /* mobile media query */
 @media (max-width: 428px) {
     /* header section */
+
+    #baslik {
+        flex-wrap: wrap;
+    }
+
+    #baslik h1 {
+        font-size: 4rem;
+    }
+
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #semboller a {
+        margin: 15px 10px;
+    }
+
+
     .header-title {
         width: 75%;
         margin: 0 auto;
@@ -139,14 +269,75 @@ footer {
     }
 
     /* menu */
+    article{
+        color: rgb(0, 4, 17);
+    }
     .menu {
         background-image: none;
     }
+    #manuarkaplanrengi{
+       background-color:rgb(225, 239, 230);
+    }
+    #menuadi {
+        margin-right: 50px;
+        margin-left: 50px;
+        text-align: center;
+        margin-bottom: 100px;
+        border-bottom: 15px solid rgb(0, 4, 17);​​
+        
+    }
+    #listelerendis{
+        max-width: 70%;
+        
+    }
+    .urunvefiyat{
+        display: block;
+    text-align: center;
+    
+    }
+.icerikleri{
+    text-align: center;
+}
+    .listeler{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        flex-wrap: wrap;
+    }
+    .urunlararasiaralik{
+        width: 200px;
+        border-bottom: 4px solid rgb(0, 4, 17);​​
+    }
+
+    .listeler div h3{
+        padding: 10px;
+        border: 4px;
+        border-radius: 10px;
+        border-style: solid;
+        border-color: rgb(0, 4, 17);​​
+        
+    }
+
+
 
     /* footer section */
     footer {
         height: auto;
         padding-top: 2.5vh;
         font-size: 2rem;
+        flex-wrap: wrap;
+    }
+
+    footer div {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #haklari div p {
+        font-size: 1rem;
+        padding-top: 15px;
     }
 }
